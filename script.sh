@@ -34,6 +34,7 @@ sudo apt install bash-completion
 curl -O https://archive.apache.org/dist/james/server/apache-james-2.3.2.tar.gz
 tar -xzf apache-james-2.3.2.tar.gz
 sudo cp -r james-2.3.2 /opt
+sudo mv ./phoenix.sh /opt/james-2.3.2/bin/phoenix.sh
 sudo chmod +x /opt/james-2.3.2/bin/*.sh
 echo "***********james server done **********"
 
