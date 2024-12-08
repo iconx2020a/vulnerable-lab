@@ -29,9 +29,10 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    #- /var/log/snort/alert
+   
   #fields:
    # event.type: snort
+    - /var/log/snort/snort.alert
     - /var/log/*.log
     - /home/ubuntu/apache2/access.log
     - /home/ubuntu/apache2/error.log
