@@ -12,8 +12,8 @@ echo "*******samba done**********"
 #install docker
 echo "***********Install docker***********"
 # Add Docker's official GPG key:
-sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt -y update
+sudo apt -y install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -23,14 +23,14 @@ echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt -y update
+sudo apt -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo usermod -aG docker ${USER}
 echo "*********docker is done**********"
 
 #install james server
 echo "*********install james server********"
-sudo apt install bash-completion
+sudo apt -y install bash-completion
 curl -O https://archive.apache.org/dist/james/server/apache-james-2.3.2.tar.gz
 tar -xzf apache-james-2.3.2.tar.gz
 sudo cp -r james-2.3.2 /opt
@@ -52,7 +52,7 @@ echo "apache tomcat is done"
 #Postfix smtp
 echo "Installing postfix smtp server"
 sudo apt update
-sudo apt install postfix
+sudo apt -y install postfix
 sudo cp /etc/postfix/main.cf /etc/postfix/main.cf.bk
 echo "***smtp done***"
 
@@ -63,7 +63,7 @@ git clone https://github.com/kozmer/log4j-shell-poc.git
 sudo mv log4j-shell-poc ~/mylog4j
 cp poc.py ~/mylog4j/log4j-shell-poc/
 cd ~/mylog4j/log4j-shell-poc
-sudo apt install python3-pip
+sudo apt -y install python3-pip
 pip install -r requirements.txt
 
 echo "*******log4j poc done*******"
