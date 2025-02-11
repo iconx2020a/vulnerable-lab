@@ -1,0 +1,68 @@
+
+query {
+  findUserByName(name: "admin2") {
+
+      name
+      password
+      role
+
+
+  }
+}
+
+query {
+    users {
+      email
+      name
+      role
+    }
+  }
+
+
+query {
+  findUser(email: "test2@gmail.com", password:"1234b") {
+    ... on User {
+      name
+      password
+      role
+    }
+
+  }
+}
+
+query {
+users {
+  email
+name
+password
+role
+}
+}
+
+query {
+  findUserByName(name: "admin2") {
+
+      name
+      password
+      role
+
+
+  }
+}
+
+query {
+  userByID(id: "635d13b5634daf5f1588c9ad") {
+      name
+      password
+      role
+  
+  }
+}
+mutation {
+    addUser(email: "admin22@gmail.com", name:"admin2", password:"1234b", role:"Admin") {
+        name
+        password
+        role
+      }
+
+    }
