@@ -1,0 +1,48 @@
+// App.tsx
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import AnimationPage from "./AnimationPage.tsx";
+import LoginPage from "./LoginPage.tsx";
+
+// LoginPage.tsx
+import { Link } from "react-router-dom";
+
+let LoginPage = () => {
+  return (
+    <Link to={`/animation`} >
+      <button>Go to animation page</button>
+    </Link>
+  );
+};
+
+
+let App = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route  path={`/animation`} element={AnimationPage} />
+        <Route path={`/login`} element={LoginPage} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
+
+//export default App;
+
+
+//export default LoginPage;
+
+// AnimationPage.tsx
+import { useEffect } from "react";
+//import { useHistory } from "react-router-dom";
+
+let AnimationPage = () => {
+  /*let history = useHistory();
+  useEffect(() => {
+    setTimeout(() => {
+      history.push(`/login`);
+    }, 3000);
+  }, []);
+  */
+  return ;
+};
