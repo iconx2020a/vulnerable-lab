@@ -21,11 +21,6 @@ import { setContext } from "@apollo/client/link/context";
 import { useQuery } from "@apollo/client";
 import SignIn from "./SignIn";
 import {ReadMe} from "./ReadMe";
-
-//bootstrap();
-//const httpLink = new HttpLink({ uri:"https://192.168.42.156:4000/api"});
-//console.log("httpLink");
-//const httpLink = new HttpLink({ uri: "https://10.196.243.110:4000/api" });
 const httpLink = new HttpLink({ uri: "/api" });
 const cache = new InMemoryCache();
 // check for a token and return the headers to the context
