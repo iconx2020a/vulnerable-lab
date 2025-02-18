@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/medicomstestapp">
+    <!-- Database resource -->
+    <Resource 
+             name="jdbc/testdb"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/testdb"
+              username="root"
+              password="root"
+              />
+</Context>
+
+ 
+                    
