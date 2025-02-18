@@ -1,8 +1,0 @@
-version: "3"
-services:
-   samba:
-     image: iconx
-     network_mode: "host"
-     tty: true
-     volumes:
-      - /home/ubuntu/logs:/home
