@@ -1,0 +1,2 @@
+Run all scripts with sudo. If not you must copy the configuration file yourself.
+mysql https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04
