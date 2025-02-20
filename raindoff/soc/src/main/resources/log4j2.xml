@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+        <Console name="ConsoleJSON" target="SYSTEM_OUT">
+            <JsonLayout compact="false" eventEol="true" stacktraceAsString="true">
+                <KeyValuePair key="URL" value="$${ctx:URL}"/>
+                <KeyValuePair key="User-agent" value="$${ctx:User-agent}"/>
+                <KeyValuePair key="IPAddr" value="$${ctx:IPAddr}"/>
+                 <KeyValuePair key="Query" value="$${ctx:Query}"/>
+                <KeyValuePair key="URL" value="$${ctx:URL}"/>
+            </JsonLayout>
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+        <Logger name="JSON_EVENT_LOGGER" level="ALL" additivity="false">
+            <Appenderref ref="ConsoleJSON"/>
+        </Logger>
+    </Loggers>
+</Configuration>
