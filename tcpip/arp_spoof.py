@@ -12,7 +12,7 @@ def enable_ip_forwarding():
       print(1,file=f);
 
 def get_mac(ip):
-  #retrive MAC address of the target IP
+  #retrieve MAC address of the target IP
   ans, _ = srp(Ether(dst='ff:ff:ff:ff:ff:ff')/ARP(pdst=ip), timeout=3, verbose=0)
   if ans:
    return ans[0][1].src
