@@ -13,4 +13,4 @@ def port_scan(target_ip, no_of_ports):
        print("List of opened ports:")
        print(sorted(open_ports))
 if __name__ == "__main__": 
-   port_scan("10.0.0.87", 1024)
+   port_scan("YourIP", 1024)
