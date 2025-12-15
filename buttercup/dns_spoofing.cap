@@ -1,5 +1,0 @@
-#dns spoofing
-set dns.spoof.domains facebook.com,*.facebook.com
-set dns.spoof.address 10.0.0.59
-set dns.spoof.all true
-dns.spoof on
