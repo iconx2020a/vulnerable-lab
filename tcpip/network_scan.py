@@ -1,5 +1,5 @@
 from scapy.all import * 
-#network scanning and service fingerprinting 
+#host and service scan 
 def network_scanner(target_subnet): 
     print(f"Scanning network: {target_subnet}") 
     # Scan for live hosts 
