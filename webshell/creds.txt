@@ -1,0 +1,6 @@
+admin:StrongPassword1
+deploy:StrongPassword2
+ops:StrongPassword3
+apache:StrongPassword1
+tomcat:batman
+soidier:StrongPassword3
